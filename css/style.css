@@ -1,0 +1,31 @@
+body {
+  margin: 0 auto; }
+
+.container {
+  max-width: 1200px;
+  height: 50vh; }
+
+.start-game-container {
+  margin-top: 20px; }
+
+.button-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 20px;
+  max-width: 30vw; }
+
+span, p {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: bold; }
+
+div {
+  margin: 0 auto;
+  text-align: center; }
+
+.result {
+  margin-bottom: 20px; }

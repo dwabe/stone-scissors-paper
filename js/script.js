@@ -14,9 +14,9 @@ var playerMove;
 var computerMove;
 var rounds;
 var computerChoice;
-var choicePaper = document.getElementById('paper');
-var choiceScissors = document.getElementById('scissors');
-var choiceRock = document.getElementById('rock');
+var choicePaper// = document.getElementById('paper');
+var choiceScissors// = document.getElementById('scissors');
+var choiceRock// = document.getElementById('rock');
 var newGame = document.getElementById('newGame');
 
 // Algorytm
@@ -60,6 +60,17 @@ function compare() {
 
 // Akcje na przyciskach
 
+var buttons = document.querySelectorAll('.player-move');
+
+for(var i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener('click', function(){
+        playerChoice = buttons[i].getAttribute("data-move");
+        playerMove = i + 1;
+        compare();
+    });
+}
+
+/*
 choicePaper.addEventListener('click', function(){
     playerMove = 1;
     playerChoice = paper;
@@ -80,3 +91,4 @@ choiceRock.addEventListener('click', function(){
     computerMove = computerChoice();
     compare();
 });
+*/
