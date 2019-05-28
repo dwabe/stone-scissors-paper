@@ -9,14 +9,15 @@ var output = document.getElementById('output');
 var gameResult = document.getElementById('gameResult');
 var playerResult = document.getElementById('playerResult').innerHTML = 0;
 var computerResult = document.getElementById('computerResult').innerHTML = 0;
-var playerChoice = choicePaper || choiceRock || choiceScissors;
+var playerChoice// = choicePaper || choiceRock || choiceScissors;
 var playerMove;
 var computerMove;
 var rounds;
 var computerChoice;
-var choicePaper// = document.getElementById('paper');
-var choiceScissors// = document.getElementById('scissors');
-var choiceRock// = document.getElementById('rock');
+var computerString;
+// var choicePaper = document.getElementById('paper');
+// var choiceScissors = document.getElementById('scissors');
+// var choiceRock = document.getElementById('rock');
 var newGame = document.getElementById('newGame');
 
 // Algorytm
@@ -36,7 +37,19 @@ function computerChoice() {
     return Math.floor(Math.random()*3+1);
 }
 
+function computerMoveToString() {
+    if(computerMove == 1){
+        computerString = 'paper';
+    } else if(computerMove == 2) {
+        computerString = 'scissors';
+    } else if(computerMove == 3) {
+        computerString = 'stone';
+    }
+}
+
+
 function compare() {
+    computerMoveToString();
     if(playerResult == (rounds-1)){
         document.getElementById('gameResult').innerHTML = "<span style=\"color:green\">" + 'Wymiatasz!' + '<br>' + 'Wygrałeś z blaszakiem.' + '<br>' + 'Zacznij nową grę!' + "</span>";
         document.getElementById('playerResult').innerHTML = rounds;
@@ -49,7 +62,7 @@ function compare() {
         if(computerMove == playerMove) {
             output.innerHTML = 'Remis';
         } else if ((playerMove == 1 && computerMove == 2) || (playerMove == 2 && computerMove == 3) || (playerMove == 3 && computerMove == 1)){
-            output.innerHTML = 'Przegrałeś. Blaszak wybrał ' + playerChoice;
+            output.innerHTML = 'Przegrałeś. Blaszak wybrał ' + computerString;
             document.getElementById('computerResult').innerHTML = 1 + computerResult++;
         } else {
             output.innerHTML = playerChoice + ' to był dobry wybór. Wygrałeś!';
@@ -64,8 +77,15 @@ var buttons = document.querySelectorAll('.player-move');
 
 for(var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener('click', function(){
-        playerChoice = buttons[i].getAttribute("data-move");
-        playerMove = i + 1;
+        playerChoice = this.getAttribute("data-move");
+        if (playerChoice == 'paper') {
+            playerMove = 1;
+        } else if (playerChoice == 'scissors') {
+            playerMove = 2;
+        } else if (playerChoice == 'rock') {
+            playerMove = 3;
+        }
+        computerMove = computerChoice();
         compare();
     });
 }
