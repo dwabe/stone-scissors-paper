@@ -2,9 +2,9 @@
 
 // Zmienne
 
-var paper = 'Papier';
-var rock = 'Kamień';
-var scissors = 'Nożyce';
+var paper = 'paper';
+var stone = 'stone';
+var scissors = 'scissors';
 var output = document.getElementById('output');
 var gameResult = document.getElementById('gameResult');
 var playerResult = document.getElementById('playerResult').innerHTML = 0;
@@ -23,13 +23,13 @@ var newGame = document.getElementById('newGame');
 // Algorytm
 
 newGame.addEventListener('click', function(){
-    rounds = window.prompt('Do ilu gramy?');
+    rounds = window.prompt('how many times we try?');
     playerResult = document.getElementById('playerResult').innerHTML = 0;
     computerResult = document.getElementById('computerResult').innerHTML = 0;
     document.getElementById('gameResult').innerHTML = '';
     document.getElementById('output').innerHTML = '';
     if(isNaN(rounds)){
-        output.innerHTML = 'Podaj liczbę!';
+        output.innerHTML = 'give a number:';
     }
 });
 
@@ -51,21 +51,21 @@ function computerMoveToString() {
 function compare() {
     computerMoveToString();
     if(playerResult == (rounds-1)){
-        document.getElementById('gameResult').innerHTML = "<span style=\"color:green\">" + 'Wymiatasz!' + '<br>' + 'Wygrałeś z blaszakiem.' + '<br>' + 'Zacznij nową grę!' + "</span>";
+        document.getElementById('gameResult').innerHTML = "<span style=\"color:green\">" + 'nice one!' + '<br>' + 'you won.' + '<br>' + 'start new game!' + "</span>";
         document.getElementById('playerResult').innerHTML = rounds;
         return;
     } else if(computerResult == (rounds-1)){
-        document.getElementById('gameResult').innerHTML = "<span style=\"color:red\">" + 'Słabo!' + '<br>' + 'Blaszak wygrał.' + '<br>' + 'Zacznij nową grę!' + "</span>";
+        document.getElementById('gameResult').innerHTML = "<span style=\"color:red\">" + 'you suck!' + '<br>' + 'computer won.' + '<br>' + 'start new game!' + "</span>";
         document.getElementById('computerResult').innerHTML = rounds;
         return;
     } else {
         if(computerMove == playerMove) {
-            output.innerHTML = 'Remis';
+            output.innerHTML = 'there is a tie!';
         } else if ((playerMove == 1 && computerMove == 2) || (playerMove == 2 && computerMove == 3) || (playerMove == 3 && computerMove == 1)){
-            output.innerHTML = 'Przegrałeś. Blaszak wybrał ' + computerString;
+            output.innerHTML = 'you lost! computer chose ' + computerString;
             document.getElementById('computerResult').innerHTML = 1 + computerResult++;
         } else {
-            output.innerHTML = playerChoice + ' to był dobry wybór. Wygrałeś!';
+            output.innerHTML = playerChoice + ' was a good choice. you won!';
             document.getElementById('playerResult').innerHTML = 1 + playerResult++;
         }
     }
@@ -82,7 +82,7 @@ for(var i = 0; i < buttons.length; i++){
             playerMove = 1;
         } else if (playerChoice == 'scissors') {
             playerMove = 2;
-        } else if (playerChoice == 'rock') {
+        } else if (playerChoice == 'stone') {
             playerMove = 3;
         }
         computerMove = computerChoice();
