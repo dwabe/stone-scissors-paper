@@ -7,9 +7,12 @@ body {
 }
 
 .container .button-container {
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .container .button-container:hover > * {
@@ -44,9 +47,12 @@ body {
 }
 
 .container .result {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
   width: 550px;
   height: 150px;
 }
@@ -147,5 +153,4 @@ input {
 input:first-of-type {
   margin-top: 15%;
 }
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.prefixed.css.map */
