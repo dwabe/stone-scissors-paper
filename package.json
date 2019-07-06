@@ -1,8 +1,8 @@
 {
-  "name": "solo-project-1",
+  "name": "stone-scissors-paper",
   "version": "1.0.0",
-  "description": "Kodilla WD Bootcamp individual project - module 9->12",
-  "main": "index.js",
+  "description": "simple stone scissors paper game",
+  "main": "js/script.js",
   "scripts": {
     "test": "npm run test:html",
     "test:html": "nu-html-checker *.html",
@@ -22,15 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dwabe/solo-project-1.git"
+    "url": "git+https://github.com/dwabe/stone-scissors-paper.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "bebe",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dwabe/solo-project-1/issues"
+    "url": "https://github.com/dwabe/stone-scissors-paper/issues"
   },
-  "homepage": "https://github.com/dwabe/solo-project-1#readme",
+  "homepage": "https://github.com/dwabe/stone-scissors-paper#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.5",
