@@ -1,0 +1,4 @@
++ superagent@5.1.0
+added 12 packages from 18 contributors, updated 9 packages, moved 7 packages and audited 6298 packages in 5.074s
+found 4 vulnerabilities (1 low, 3 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details
