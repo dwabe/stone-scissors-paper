@@ -13,7 +13,7 @@
         <div class="button-container">
             <button id="1" class="player-move">paper</button>
             <button id="2" class="player-move">scissors</button>
-            <button id="3" class="player-move">rock</button>
+            <button id="3" class="player-move">stone</button>
         </div>
         <div id="output">
         </div>
@@ -25,18 +25,22 @@
             </div>
         </div>
         <div id="result" class="result">
-            <span id="playerResult"></span>
+            <div class="player">
             <p>player</p>
-            <span id="computerResult"></span>
+            <span id="playerResult"></span>
+            </div>
+            <div class="computer">
             <p>computer</p>
+            <span id="computerResult"></span>
+            </div>
         </div>
         <div class="newgame-container">
             <button id="newGame" class="newgameBtn">new game</button>
         </div>
         <div class="overlay" id="modal-overlay2">
-            <div class="modal" id="ng-modal">
+            <div class="modal modal2" id="ng-modal">
                 <a href="#" class="close">x</a>
-                <input type="text" id="player-name" placeholder="your name">
+                <input type="text" id="player-name" placeholder="enter your name">
                 <input type="number" id="rounds-number" placeholder="how many rounds?">
                 <button id="start-game">start</button>
             </div>
