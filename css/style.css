@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap");
 body {
   margin: 0 auto;
+  font-family: 'Quicksand';
 }
 
 .container {
@@ -24,17 +26,18 @@ body {
 .container .button-container button {
   width: 200px;
   height: 50px;
-  line-height: 50px;
-  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Quicksand';
+  font-size: 30px;
   margin: 10px;
-  border: 3px solid #000;
-  background: green;
-  border-radius: 5px;
+  border: 1px solid #000;
+  background: #00afce;
+  border-radius: 3px;
   transition: all .5s ease-in-out;
 }
 
 .container .button-container button:hover {
-  background: lightgreen;
+  background: #00c3ff;
 }
 
 .container div {
@@ -43,12 +46,18 @@ body {
   font-size: 30px;
 }
 
+.container #output {
+  padding-top: 30px;
+}
+
 .container .result {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 550px;
   height: 150px;
+  font-weight: 700;
+  padding-bottom: 20px;
 }
 
 .container .result span {
@@ -58,17 +67,18 @@ body {
 .container .newgame-container button {
   width: 200px;
   height: 50px;
-  line-height: 50px;
-  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Quicksand';
+  font-size: 30px;
   margin: 10px;
-  border: 3px solid #000;
-  background: green;
-  border-radius: 5px;
+  border: 1px solid #000;
+  background: #00afce;
+  border-radius: 3px;
   transition: all .5s ease-in-out;
 }
 
 .container .newgame-container button:hover {
-  background: lightgreen;
+  background: #00c3ff;
 }
 
 .overlay {
@@ -88,7 +98,7 @@ body {
 .modal {
   background: white;
   width: 400px;
-  height: 400px;
+  height: 80vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,7 +107,9 @@ body {
 }
 
 .modal p {
-  font-size: 16px;
+  font-size: 14px;
+  text-align: left;
+  padding: 3px 6px;
 }
 
 .modal .close {
@@ -105,7 +117,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 5px;
+  padding-right: 10px;
   color: #000;
 }
 
@@ -124,24 +136,32 @@ body {
 .modal button {
   width: 200px;
   height: 50px;
-  line-height: 50px;
-  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Quicksand';
+  font-size: 30px;
   margin: 10px;
-  border: 3px solid #000;
-  background: green;
-  border-radius: 5px;
+  border: 1px solid #000;
+  background: #00afce;
+  border-radius: 3px;
   transition: all .5s ease-in-out;
 }
 
 .modal button:hover {
-  background: lightgreen;
+  background: #00c3ff;
+}
+
+.modal2 {
+  height: 300px;
 }
 
 input {
+  font-family: 'Quicksand';
+  font-size: 18px;
   width: calc(100% - 60px);
+  padding-left: 10px;
   height: 25px;
   margin: 25px;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 input:first-of-type {

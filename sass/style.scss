@@ -1,20 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap');
+
 @mixin buttons {
     width: 200px;
     height: 50px;
-    line-height: 50px;
-    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Quicksand';
+    font-size: 30px;
     margin: 10px;
-    border: 3px solid #000;
-    background: green;
-    border-radius: 5px;
+    border: 1px solid #000;
+    background: rgb(0, 175, 206);
+    border-radius: 3px;
     transition: all .5s ease-in-out;
     &:hover {
-        background: lightgreen;
+        background: rgb(0, 195, 255);
     }
 }
 
 body {
     margin: 0 auto;
+    font-family: 'Quicksand';
 }
 
 .container {
@@ -36,8 +40,12 @@ body {
     } 
     div {
         margin: 0 auto;
+        
         text-align: center;
         font-size: 30px;
+    }
+    #output {
+        padding-top: 30px;
     }
     .result {
         display: flex;
@@ -45,6 +53,8 @@ body {
         align-items: center;
         width: 550px;
         height: 150px;
+        font-weight: 700;
+        padding-bottom: 20px;
         span {
             font-size: 40px;
         }
@@ -72,21 +82,23 @@ body {
 .modal {
     background: white;
     width: 400px;
-    height: 400px;
+    height: 80vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     overflow: auto;
     p {
-        font-size: 16px;
+        font-size: 14px;
+        text-align: left;
+        padding: 3px 6px;
     }
     .close {
         text-decoration: none;
         position: absolute;
         right: 0;
         top: 0;
-        padding: 5px;
+        padding-right: 10px;
         color: #000;
     }
     header {
@@ -104,11 +116,18 @@ body {
     }
 }
 
+.modal2 {
+    height: 300px;
+}
+
 input {
+    font-family: 'Quicksand';
+    font-size: 18px;
     width: calc(100% - 60px);
+    padding-left: 10px;
     height: 25px;
     margin: 25px;
-    border-radius: 5px;
+    border-radius: 3px;
     &:first-of-type {
         margin-top: 15%;
     }
